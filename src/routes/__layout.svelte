@@ -1,7 +1,5 @@
-<slot />
+<script lang="ts">
+	import '../app.css';
+</script>
 
-<style globals type="postcss">
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-</style>
+<slot />
