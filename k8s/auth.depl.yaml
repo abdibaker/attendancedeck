@@ -17,7 +17,7 @@ spec:
           image: abdibaker/auth
           resources:
             limits:
-              memory: '128Mi'
+              memory: '256Mi'
               cpu: '500m'
           ports:
             - containerPort: 3000
@@ -30,5 +30,7 @@ spec:
   selector:
     app: auth
   ports:
-    - port: 3000
+    - name: auth
+      protocol: TCP
+      port: 3000
       targetPort: 3000
