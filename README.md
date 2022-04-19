@@ -28,7 +28,7 @@ npm run dev -- --open or pnpm dev -- --open
 
 👤 **Abdillah Bakari**
 
-- Website: abdibaker.com
+- Website: [abdibaker.com]()
 - Github: [@abdibaker](https://github.com/abdibaker)
 - LinkedIn: [@abdibaker](https://linkedin.com/in/abdibaker)
 
