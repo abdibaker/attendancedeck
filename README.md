@@ -13,7 +13,7 @@
 Install the dependencies...
 
 ```bash
-cd attendancedeck
+cd attendancedeck/client
 npm install or pnpm i
 
 ```
