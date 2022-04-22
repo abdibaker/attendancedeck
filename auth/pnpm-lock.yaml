@@ -5,6 +5,7 @@ specifiers:
   axios: ^0.26.1
   body-parser: ^1.20.0
   express: ^4.17.3
+  express-validator: ^6.14.0
   ts-node-dev: ^1.1.8
   typescript: ^4.6.3
 
@@ -13,6 +14,7 @@ dependencies:
   axios: 0.26.1
   body-parser: 1.20.0
   express: 4.17.3
+  express-validator: 6.14.0
   ts-node-dev: 1.1.8_typescript@4.6.3
   typescript: 4.6.3
 
@@ -282,6 +284,14 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
+  /express-validator/6.14.0:
+    resolution: {integrity: sha512-ZWHJfnRgePp3FKRSKMtnZVnD1s8ZchWD+jSl7UMseGIqhweCo1Z9916/xXBbJAa6PrA3pUZfkOvIsHZG4ZtIMw==}
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      lodash: 4.17.21
+      validator: 13.7.0
+    dev: false
+
   /express/4.17.3:
     resolution: {integrity: sha512-yuSQpz5I+Ch7gFrPCk4/c+dIBKlQUxtgwqzph132bsT6qhuzss6I8cLJQz7B3rFblzd6wtcI0ZbGltH/C4LjUg==}
     engines: {node: '>= 0.10.0'}
@@ -485,6 +495,10 @@ packages:
   /is-number/7.0.0:
     resolution: {integrity: sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==}
     engines: {node: '>=0.12.0'}
+    dev: false
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: false
 
   /make-error/1.3.6:
@@ -846,6 +860,11 @@ packages:
   /utils-merge/1.0.1:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=}
     engines: {node: '>= 0.4.0'}
+    dev: false
+
+  /validator/13.7.0:
+    resolution: {integrity: sha512-nYXQLCBkpJ8X6ltALua9dRrZDHVYxjJ1wgskNt1lH9fzGjs3tgojGSCBjmEPwkWS1y29+DrizMTW19Pr9uB2nw==}
+    engines: {node: '>= 0.10'}
     dev: false
 
   /vary/1.1.2:
