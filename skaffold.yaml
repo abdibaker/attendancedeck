@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2beta27
+kind: Config
+metadata:
+  name: attendancedeck
+build:
+  artifacts:
+    - image: abdibaker/auth
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+      - k8s/auth.depl.yaml
+      - k8s/ingress-srv.yaml
