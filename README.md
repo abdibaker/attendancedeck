@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> Monitoring is one of the great responsibilities of a teacher. This includes writing lesson plans, teaching lessons to his/her students, and recording the performance of the students. Teachers have a lot of things to do in everyday routine, due to this everyday task, they consume much time in doing paper works and preparing some devices as they are required to do, because they perform these tasks manually. we are motivated to create an automated monitoring and attendance system for students using fingerprint scanner. , the teacher will have access to the profile of each student, which will be recognized by reading his or her fingerprint.
+> Monitoring is one of the great responsibilities for a teacher. This includes planning lesson, teaching lessons, and recording the performance of the students. Teachers have a lot of things to do in everyday routine, due to this everyday task, they consume much time in doing paper works and preparing some devices as they are required to do, because they perform these tasks manually. We are motivated to create an automated monitoring and attendance system for students using fingerprint scanner.The teacher will have access to the profile of each student, which will be recognized by reading student's fingerprint.
 
 ### 🏠 [Homepage](coming soon)
 
