@@ -1,5 +1,4 @@
 k8s_yaml(['./k8s/auth.depl.yaml', './k8s/ingress-srv.yaml'])
-k8s_resource('auth-depl', port_forwards=4000)
 
 # Add a live_update rule to our docker_build
 docker_build('abdibaker/auth', './auth',
