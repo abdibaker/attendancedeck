@@ -2,7 +2,7 @@
 <p>
 </p>
 
-> Monitoring is one of the great responsibilities for a teacher. This includes planning lesson, teaching lessons, and recording the performance of the students. Teachers have a lot of things to do in everyday routine, due to this everyday task, they consume much time in doing paper works and preparing some devices as they are required to do, because they perform these tasks manually. We are motivated to create an automated monitoring and attendance system for students using fingerprint scanner.The teacher will have access to the profile of each student, which will be recognized by reading student's fingerprint.
+> Monitoring is one of the great responsibilities for a teacher. This includes planning lesson, teaching lessons, and recording the performance of the students. Teachers have a lot of things to do in everyday routine, due to this everyday task, they consume much time in doing paper works and preparing some devices as they are required to do, because they perform these tasks manually. We are motivated to create an automated monitoring and attendance system for students using fingerprint scanner.The teacher will have access to the profile of each student, which will be recognized by reading student's fingerprint. Fingerprint attendance system aims to automate the attendance taking procedure of an educational institute using biometric technology (fingerprint). The automated attendance taking procedure is extremely efficient compared to the traditional name call out procedures.
 
 ### 🏠 [Homepage](coming soon)
 
@@ -28,7 +28,7 @@ npm run dev -- --open or pnpm dev -- --open
 
 👤 **Abdillah Bakari**
 
-- Website: [abdibaker.com]()
+- Website: [abdibaker.me]()
 - Github: [@abdibaker](https://github.com/abdibaker)
 - LinkedIn: [@abdibaker](https://linkedin.com/in/abdibaker)
 
