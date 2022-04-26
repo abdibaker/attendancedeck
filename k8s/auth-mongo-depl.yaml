@@ -1,36 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-depl
+  name: auth-mongo-depl
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: auth
+      app: auth-mongo
   template:
     metadata:
       labels:
-        app: auth
+        app: auth-mongo
     spec:
       containers:
-        - name: auth
-          image: abdibaker/auth
+        - name: auth-mongo
+          image: mongo
           resources:
             limits:
               memory: '256Mi'
               cpu: '200m'
-          ports:
-            - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: auth-srv
+  name: auth-mongo-srv
 spec:
   selector:
-    app: auth
+    app: auth-mongo
   ports:
-    - name: auth
-      protocol: TCP
-      port: 3000
-      targetPort: 3000
+    - port: 27017
+      targetPort: 27017
