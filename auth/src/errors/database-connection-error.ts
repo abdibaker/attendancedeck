@@ -5,7 +5,7 @@ export class DatabaseConnectionError extends CustomError {
   reason = 'error connectiong to database';
 
   constructor() {
-    super('error with associated withi DB');
+    super('error associated with DB');
 
     Object.setPrototypeOf(this, DatabaseConnectionError.prototype);
   }

@@ -26,7 +26,9 @@ app.use(errorHandler);
 
 const startDb = async () => {
   try {
-    await mongoose.connect('mongodb://auth-mongo-srv:27017/auth');
+    await mongoose.connect(
+      'mongodb+srv://abdibaker:Heroally1@attendancedeck.o2mg0.mongodb.net/user?retryWrites=true&w=majority'
+    );
   } catch (err) {
     console.error(err);
   }
