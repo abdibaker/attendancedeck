@@ -1,17 +1,24 @@
-import express, { Express, Request, Response } from 'express';
+import express, {Express, Request, Response} from 'express';
 import mongoose from 'mongoose';
+import cookieSession from 'cookie-session'
 import 'express-async-errors';
-import { json } from 'body-parser';
+// @ts-ignore
+import {json} from 'body-parser';
 
-import { signupRouter } from './routes/signup';
-import { signoutRouter } from './routes/signout';
-import { signinRouter } from './routes/signin';
-import { currentUserRouter } from './routes/current-user';
-import { NotFoundError } from './errors/not-found-error';
-import { errorHandler } from './middlewares/error-hadler';
+import {signupRouter} from './routes/signup';
+import {signoutRouter} from './routes/signout';
+import {signinRouter} from './routes/signin';
+import {currentUserRouter} from './routes/current-user';
+import {NotFoundError} from './errors/not-found-error';
+import {errorHandler} from './middlewares/error-hadler';
 
 const app: Express = express();
+app.set('trust proxy', true)
 app.use(json());
+app.use(cookieSession({
+  signed: false,
+  // secure: true,
+}))
 
 app.use(signupRouter);
 app.use(signinRouter);
@@ -25,14 +32,17 @@ app.all('*', async (req: Request, res: Response) => {
 app.use(errorHandler);
 
 const startDb = async () => {
+  if (!process.env.JWT_KEY) {
+    throw new Error('JWT_KEY must be defined')
+  }
   try {
     await mongoose.connect(
-      'mongodb+srv://abdibaker:Heroally1@attendancedeck.o2mg0.mongodb.net/user?retryWrites=true&w=majority'
+      `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@attendancedeck.o2mg0.mongodb.net/user?retryWrites=true&w=majority`
     );
   } catch (err) {
     console.error(err);
   }
-  app.listen(3000, () => {
+  app.listen(process.env.PORT || 3000, () => {
     console.log('Listen on port 3000!');
   });
 };

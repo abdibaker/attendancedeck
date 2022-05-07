@@ -1,7 +1,9 @@
-import express, { Request, Response, Router } from 'express';
-import { body, validationResult } from 'express-validator';
-import { User } from '../models/user';
-import { RequestValidationError } from '../errors/request-validation-error';
+import express, {Request, Response, Router} from 'express';
+import {body, validationResult} from 'express-validator';
+import jwt from 'jsonwebtoken'
+
+import {User} from '../models/user';
+import {RequestValidationError} from '../errors/request-validation-error';
 import {BadRequestError} from "../errors/bad-request-error";
 
 const router: Router = express.Router();
@@ -22,15 +24,24 @@ router.post(
       throw new RequestValidationError(errors.array());
     }
 
-    const { email, password } = req.body;
+    const {email, password} = req.body;
 
-    const existingUser = await User.findOne({ email });
+    const existingUser = await User.findOne({email});
     if (existingUser) {
       throw new BadRequestError('Email in use')
     }
 
-    const user = User.build({ email, password });
+    const user = User.build({email, password});
     await user.save();
+
+    const userJwt = jwt.sign({
+      id: user.id,
+      email: user.email
+    }, process.env.JWT_KEY!)
+
+    req.session = {
+      jwt: userJwt
+    };
 
     res.status(201).send(user);
   }
