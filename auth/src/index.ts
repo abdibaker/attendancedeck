@@ -6,7 +6,7 @@ import 'express-async-errors';
 import {json} from 'body-parser';
 
 import {signupRouter} from './routes/signup';
-import {signoutRouter} from './routes/signout';
+import {signOutRouter} from './routes/signout';
 import {signinRouter} from './routes/signin';
 import {currentUserRouter} from './routes/current-user';
 import {NotFoundError} from './errors/not-found-error';
@@ -22,7 +22,7 @@ app.use(cookieSession({
 
 app.use(signupRouter);
 app.use(signinRouter);
-app.use(signoutRouter);
+app.use(signOutRouter);
 app.use(currentUserRouter);
 
 app.all('*', async (req: Request, res: Response) => {
