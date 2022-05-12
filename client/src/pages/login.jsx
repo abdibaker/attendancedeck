@@ -2,13 +2,13 @@ import { AtSymbolIcon, LockClosedIcon } from "@heroicons/react/solid";
 import { ArrowCircleRightIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 
-const Signin = () => {
+const Login = () => {
   return (
     <main className="bg-gray-100 grid place-content-center min-h-screen">
-      <div className="flex flex-col bg-white p-8 rounded-2xl shadow-md">
+      <div className="flex sm:min-w-[24rem] flex-col bg-white p-8 rounded-2xl shadow-md">
         <h1 className="text-4xl font-semibold self-center">Login Now</h1>
         <p className="text-md self-center mt-4">
-          Enter your credenttials to login.
+          Enter your credentials to login.
         </p>
         <form className="max-w-md mt-10">
           <label htmlFor="email" className="block label-text mb-2">
@@ -62,4 +62,4 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+export default Login;
