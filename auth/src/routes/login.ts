@@ -9,7 +9,7 @@ import jwt from "jsonwebtoken";
 const router: Router = express.Router();
 
 router.post(
-  '/api/users/Signin',
+  '/api/users/login',
   [
     body('email').isEmail().withMessage('Email must be valid'),
     body('password')
@@ -42,4 +42,4 @@ router.post(
   }
 );
 
-export { router as signinRouter };
+export { router as loginRouter };

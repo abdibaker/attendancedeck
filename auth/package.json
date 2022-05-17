@@ -5,7 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
-    "start": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+    "start": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "test": "jest --watchAll --no-cache"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./src/test/setup.ts"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -26,7 +34,14 @@
     "typescript": "^4.6.3"
   },
   "devDependencies": {
+    "@types/jest": "^27.5.0",
+    "@types/supertest": "^2.0.12",
     "concurrently": "^7.1.0",
-    "nodemon": "^2.0.15"
+    "dotenv": "^16.0.1",
+    "jest": "^28.1.0",
+    "mongodb-memory-server": "^8.5.2",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.3",
+    "ts-jest": "^28.0.2"
   }
 }

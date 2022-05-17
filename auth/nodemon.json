@@ -1,7 +1,0 @@
-{
-  "env": {
-    "MONGO_USER": "abdibaker",
-    "MONGO_PASSWORD": "Heroally1",
-    "JWT_KEY": "Heroally12!@"
-  }
-}
