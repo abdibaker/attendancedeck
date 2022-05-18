@@ -1,5 +1,6 @@
 import express, {Express, Request, Response} from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import cookieSession from 'cookie-session'
 import 'express-async-errors';
 // @ts-ignore
@@ -19,6 +20,7 @@ app.use(cookieSession({
   signed: false,
   // secure: true,
 }))
+app.use(cors());
 
 app.use(signupRouter);
 app.use(signinRouter);
@@ -42,8 +44,8 @@ const startDb = async () => {
   } catch (err) {
     console.error(err);
   }
-  app.listen(process.env.PORT || 3000, () => {
-    console.log('Listen on port 3000!');
+  app.listen(process.env.PORT || 5000, () => {
+    console.log('Listen on port 5000!');
   });
 };
 
