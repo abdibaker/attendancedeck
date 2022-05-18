@@ -7,6 +7,6 @@ ENV NODE_ENV $node_env
 WORKDIR /app
 
 ADD package.json .
-RUN yarn install
+RUN yarn install --only=prod
 
 ADD . .
