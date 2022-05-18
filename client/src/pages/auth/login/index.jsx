@@ -1,16 +1,30 @@
 import { AtSymbolIcon, LockClosedIcon } from "@heroicons/react/solid";
 import { ArrowCircleRightIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async(e) => {
+    e.preventDefault
+    const response = await axios.post('http://localhost:5000/api/users/signin',{
+      email,
+      password
+    })
+  }
+  
+
   return (
     <main className="bg-gray-100 grid place-content-center min-h-screen">
       <div className="flex sm:min-w-[24rem] flex-col bg-white p-8 rounded-2xl shadow-md">
         <h1 className="text-4xl font-semibold self-center">Login Now</h1>
         <p className="text-md self-center mt-4">
-          Enter your credentials to login.
+          Enter your credentials to login
         </p>
-        <form className="max-w-md mt-10">
+        <form onSubmit={handleSubmit} className="max-w-md mt-10">
           <label htmlFor="email" className="block label-text mb-2">
             E-Mail Address
           </label>
@@ -22,6 +36,8 @@ const Login = () => {
               type="email"
               name="email"
               id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               className="input input-bordered rounded-full w-full input-primary pl-10"
             />
@@ -37,6 +53,8 @@ const Login = () => {
               type="password"
               name="password"
               id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter your password"
               className="input input-bordered rounded-full w-full input-primary pl-10"
             />
