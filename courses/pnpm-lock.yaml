@@ -4,7 +4,6 @@ specifiers:
   '@abattendance/common': ^1.0.3
   '@types/body-parser': ^1.19.2
   '@types/cookie-session': ^2.0.44
-  '@types/cors': ^2.8.12
   '@types/express': ^4.17.13
   '@types/jest': ^27.5.0
   '@types/jsonwebtoken': ^8.5.8
@@ -13,7 +12,6 @@ specifiers:
   body-parser: ^1.20.0
   concurrently: ^7.1.0
   cookie-session: ^2.0.0
-  cors: ^2.8.5
   dotenv: ^16.0.1
   express: ^4.17.3
   express-async-errors: ^3.1.1
@@ -32,13 +30,11 @@ dependencies:
   '@abattendance/common': 1.0.3
   '@types/body-parser': 1.19.2
   '@types/cookie-session': 2.0.44
-  '@types/cors': 2.8.12
   '@types/express': 4.17.13
   '@types/jsonwebtoken': 8.5.8
   axios: 0.26.1
   body-parser: 1.20.0
   cookie-session: 2.0.0
-  cors: 2.8.5
   express: 4.17.3
   express-async-errors: 3.1.1_express@4.17.3
   express-validator: 6.14.0
@@ -738,10 +734,6 @@ packages:
     resolution: {integrity: sha512-t73xJJrvdTjXrn4jLS9VSGRbz0nUY3cl2DMGDU48lKl+HR9dbbjW2A9r3g40VA++mQpy6uuHg33gy7du2BKpog==}
     dev: true
 
-  /@types/cors/2.8.12:
-    resolution: {integrity: sha512-vt+kDhq/M2ayberEtJcIN/hxXy1Pk+59g2FV/ZQceeaTyCtCucjL2Q7FXlFjtWn4n15KCr1NE2lNNFhp0lEThw==}
-    dev: false
-
   /@types/express-serve-static-core/4.17.28:
     resolution: {integrity: sha512-P1BJAEAW3E2DJUlkgq4tOL3RyMunoWXqbSCygWo5ZIWTjUgN1YnaXWW4VWl/oc8vs/XoYibEGBKP0uZyF4AHig==}
     dependencies:
@@ -1426,14 +1418,6 @@ packages:
     dependencies:
       depd: 2.0.0
       keygrip: 1.1.0
-    dev: false
-
-  /cors/2.8.5:
-    resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
-    engines: {node: '>= 0.10'}
-    dependencies:
-      object-assign: 4.1.1
-      vary: 1.1.2
     dev: false
 
   /create-require/1.1.1:
@@ -3179,11 +3163,6 @@ packages:
     dependencies:
       path-key: 3.1.1
     dev: true
-
-  /object-assign/4.1.1:
-    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
-    engines: {node: '>=0.10.0'}
-    dev: false
 
   /object-inspect/1.12.0:
     resolution: {integrity: sha512-Ho2z80bVIvJloH+YzRmpZVQe87+qASmBUKZDWgx9cu+KDrX2ZDH/3tMy+gXbZETVGs2M8YdxObOh7XAtim9Y0g==}

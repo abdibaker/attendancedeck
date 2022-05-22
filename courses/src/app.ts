@@ -1,13 +1,9 @@
 import 'dotenv/config'
-import express, {Express} from 'express';
+import express, {Express, Request, Response} from 'express';
 import cookieSession from 'cookie-session'
 import 'express-async-errors';
 import {json} from 'body-parser';
 
-import {signupRouter} from './routes/signup';
-import {signOutRouter} from './routes/signout';
-import {loginRouter} from './routes/login';
-import {currentUserRouter} from './routes/current-user';
 import {errorHandler, NotFoundError} from '@abattendance/common';
 import * as process from "process";
 
@@ -19,12 +15,7 @@ app.use(cookieSession({
   secure: process.env.NODE_ENV !== 'test'
 }))
 
-app.use(signupRouter);
-app.use(loginRouter);
-app.use(signOutRouter);
-app.use(currentUserRouter);
-
-app.all('*', async () => {
+app.all('*', async (req: Request, res: Response) => {
   throw new NotFoundError();
 });
 
