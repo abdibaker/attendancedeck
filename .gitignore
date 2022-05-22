@@ -127,4 +127,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-.idea
+.idea/prettier.xml
+.idea/codeStyles/codeStyleConfig.xml

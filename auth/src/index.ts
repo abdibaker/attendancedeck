@@ -1,8 +1,5 @@
 import {app} from './app'
 import mongoose from 'mongoose';
-import cors from 'cors';
-
-app.use(cors());
 
 (async () => {
   if (!process.env.JWT_KEY) {
@@ -15,8 +12,8 @@ app.use(cors());
   } catch (err) {
     console.error(err);
   }
-  app.listen(process.env.PORT || 5000, () => {
-    console.log('Listen on port 5000!');
+  app.listen(process.env.PORT || 3000, () => {
+    console.log('Listen on port 3000!');
   });
 }
 )();

@@ -3,9 +3,7 @@ import {body} from 'express-validator';
 import jwt from 'jsonwebtoken'
 
 import {User} from '../models/user';
-import {BadRequestError} from "../errors/bad-request-error";
-import {validateRequest} from "../middlewares/validate-request";
-
+import {BadRequestError, validateRequest} from "@abattendance/common";
 const router: Router = express.Router();
 
 router.post(
@@ -15,7 +13,7 @@ router.post(
     body('password')
       .trim()
       .isLength({ min: 8, max: 20 })
-      .withMessage('Password must be between 8 and 20'),
+      .withMessage('PasswordManager must be between 8 and 20'),
   ],
   validateRequest,
   async (req: Request, res: Response) => {

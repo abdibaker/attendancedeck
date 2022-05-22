@@ -1,16 +1,14 @@
 import 'dotenv/config'
-import express, {Express, Request, Response} from 'express';
+import express, {Express} from 'express';
 import cookieSession from 'cookie-session'
 import 'express-async-errors';
-// @ts-ignore
 import {json} from 'body-parser';
 
 import {signupRouter} from './routes/signup';
 import {signOutRouter} from './routes/signout';
 import {loginRouter} from './routes/login';
 import {currentUserRouter} from './routes/current-user';
-import {NotFoundError} from './errors/not-found-error';
-import {errorHandler} from './middlewares/error-hadler';
+import {errorHandler, NotFoundError} from '@abattendance/common';
 import * as process from "process";
 
 const app: Express = express();
@@ -26,7 +24,7 @@ app.use(loginRouter);
 app.use(signOutRouter);
 app.use(currentUserRouter);
 
-app.all('*', async (req: Request, res: Response) => {
+app.all('*', async () => {
   throw new NotFoundError();
 });
 
