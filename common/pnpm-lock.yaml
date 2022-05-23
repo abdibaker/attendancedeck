@@ -7,7 +7,7 @@ specifiers:
   cookie-session: ^2.0.0
   del-cli: ^4.0.1
   express: ^4.18.1
-  express-validator: ^6.14.0
+  express-validator: ^6.14.1
   jsonwebtoken: ^8.5.1
   typescript: ^4.6.4
 
@@ -17,7 +17,7 @@ dependencies:
   '@types/jsonwebtoken': 8.5.8
   cookie-session: 2.0.0
   express: 4.18.1
-  express-validator: 6.14.0
+  express-validator: 6.14.1
   jsonwebtoken: 8.5.1
 
 devDependencies:
@@ -72,13 +72,13 @@ packages:
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
     dependencies:
       '@types/connect': 3.4.35
-      '@types/node': 17.0.34
+      '@types/node': 17.0.35
     dev: false
 
   /@types/connect/3.4.35:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
-      '@types/node': 17.0.34
+      '@types/node': 17.0.35
     dev: false
 
   /@types/cookie-session/2.0.44:
@@ -91,7 +91,7 @@ packages:
   /@types/express-serve-static-core/4.17.28:
     resolution: {integrity: sha512-P1BJAEAW3E2DJUlkgq4tOL3RyMunoWXqbSCygWo5ZIWTjUgN1YnaXWW4VWl/oc8vs/XoYibEGBKP0uZyF4AHig==}
     dependencies:
-      '@types/node': 17.0.34
+      '@types/node': 17.0.35
       '@types/qs': 6.9.7
       '@types/range-parser': 1.2.4
     dev: false
@@ -108,7 +108,7 @@ packages:
   /@types/jsonwebtoken/8.5.8:
     resolution: {integrity: sha512-zm6xBQpFDIDM6o9r6HSgDeIcLy82TKWctCXEPbJJcXb5AKmi5BNNdLXneixK4lplX3PqIVcwLBCGE/kAGnlD4A==}
     dependencies:
-      '@types/node': 17.0.34
+      '@types/node': 17.0.35
     dev: false
 
   /@types/keygrip/1.0.2:
@@ -123,8 +123,8 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
-  /@types/node/17.0.34:
-    resolution: {integrity: sha512-XImEz7XwTvDBtzlTnm8YvMqGW/ErMWBsKZ+hMTvnDIjGCKxwK5Xpc+c/oQjOauwq8M4OS11hEkpjX8rrI/eEgA==}
+  /@types/node/17.0.35:
+    resolution: {integrity: sha512-vu1SrqBjbbZ3J6vwY17jBs8Sr/BKA+/a/WtjRG+whKg1iuLFOosq872EXS0eXWILdO36DHQQeku/ZcL6hz2fpg==}
     dev: false
 
   /@types/normalize-package-data/2.4.1:
@@ -143,7 +143,7 @@ packages:
     resolution: {integrity: sha512-nCkHGI4w7ZgAdNkrEu0bv+4xNV/XDqW+DydknebMOQwkpDGx8G+HTlj7R7ABI8i8nKxVw0wtKPi1D+lPOkh4YQ==}
     dependencies:
       '@types/mime': 1.3.2
-      '@types/node': 17.0.34
+      '@types/node': 17.0.35
     dev: false
 
   /accepts/1.3.8:
@@ -436,8 +436,8 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /express-validator/6.14.0:
-    resolution: {integrity: sha512-ZWHJfnRgePp3FKRSKMtnZVnD1s8ZchWD+jSl7UMseGIqhweCo1Z9916/xXBbJAa6PrA3pUZfkOvIsHZG4ZtIMw==}
+  /express-validator/6.14.1:
+    resolution: {integrity: sha512-4w7gn/jPW1a+r833xBqpu4pL7XiiScDwlbBIMtiqUEt/MVNqR94HOHyKLcCtnqCnEPiqrX1Mqt9l/SVN/iqeLA==}
     engines: {node: '>= 8.0.0'}
     dependencies:
       lodash: 4.17.21
@@ -924,8 +924,8 @@ packages:
       validate-npm-package-license: 3.0.4
     dev: true
 
-  /object-inspect/1.12.0:
-    resolution: {integrity: sha512-Ho2z80bVIvJloH+YzRmpZVQe87+qASmBUKZDWgx9cu+KDrX2ZDH/3tMy+gXbZETVGs2M8YdxObOh7XAtim9Y0g==}
+  /object-inspect/1.12.1:
+    resolution: {integrity: sha512-Y/jF6vnvEtOPGiKD1+q+X0CiUYRQtEHp89MLLUJ7TUivtH8Ugn2+3A7Rynqk7BRsAoqeOQWnFnjpDrKSxDgIGA==}
     dev: false
 
   /on-finished/2.4.1:
@@ -1153,7 +1153,7 @@ packages:
     dependencies:
       call-bind: 1.0.2
       get-intrinsic: 1.1.1
-      object-inspect: 1.12.0
+      object-inspect: 1.12.1
     dev: false
 
   /slash/3.0.0:

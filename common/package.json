@@ -1,6 +1,6 @@
 {
   "name": "@abattendance/common",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "del ./build/*",
     "build": "npm run clean && tsc",
-    "pub": "npm version patch && npm run build && npm publish"
+    "pub": "npm version patch && npm run build && git add . && git commit -m \"Update common package\" && npm publish"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +25,7 @@
     "@types/jsonwebtoken": "^8.5.8",
     "cookie-session": "^2.0.0",
     "express": "^4.18.1",
-    "express-validator": "^6.14.0",
+    "express-validator": "^6.14.1",
     "jsonwebtoken": "^8.5.1"
   }
 }
